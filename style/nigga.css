@@ -1,0 +1,99 @@
+
+body{
+  font-family: "Kanit";
+  background-image: url('https://www.matichon.co.th/wp-content/uploads/2024/09/เลิกรักษา00.jpg');
+  margin: 0;
+  padding: 0;
+}
+@media (max-width: 678px) {
+  .container {
+  /* border: 3px solid red; */
+  grid-template-rows: 50px 50px 50px 1fr
+  50px 50px 50px;
+  grid-template-columns: 20fr;
+  /* margin: 30px; */
+  grid-template-areas:
+  "header"
+  "banner"
+  "left-aside"
+  "main"
+  "right-aside"
+  "low-content"
+  "footer";
+  }
+}
+
+.contant {
+  background-color: #ffffff;
+  margin: 1rem;
+  border-radius: 2rem;
+  border: 2px solid white;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+
+
+.warpper{
+  background-color: white;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 10px 10px 15px rgb(87, 87, 87);
+  position: sticky;
+  top: 0;
+  transition: box-shadow 0.3s ease
+}
+
+.header {
+  grid-area: header;
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.banner {
+  grid-area: banner;
+  background-color: #2196F3;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.left-aside {
+  grid-area: left-aside;
+  background-color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+}
+
+.main {
+  grid-area: main;
+  background-color: #ffffff;
+  padding: 20px;
+  text-align: center;
+}
+
+.right-aside {
+  grid-area: right-aside;
+  background-color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+}
+
+.low-content {
+  grid-area: low-content;
+  background-color: #ddd;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
