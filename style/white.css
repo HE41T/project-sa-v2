@@ -1,3 +1,7 @@
+p{
+  padding: 0rem 1.2rem 0rem 1.2rem;
+}
+
 label {
   width: 100%;
   cursor: pointer;
@@ -8,287 +12,80 @@ label {
   transition: all 0.5s ease;
 }
 
-#ch1 {
+#ch1, #ch2, #ch3, #ch4, #ch5, #ch6, #ch7, #ch8, #ch9, #ch10 {
   display: none;
 }
 
-#ch1:checked ~ .incard1 {
-  max-height: 500px; /* Adjust this value to match the maximum expected height */
+/* Animation and centering for all cards */
+#ch1:checked ~ .incard1,
+#ch2:checked ~ .incard2,
+#ch3:checked ~ .incard3,
+#ch4:checked ~ .incard4,
+#ch5:checked ~ .incard5,
+#ch6:checked ~ .incard6,
+#ch7:checked ~ .incard7,
+#ch8:checked ~ .incard8,
+#ch9:checked ~ .incard9,
+#ch10:checked ~ .incard10 {
+  max-height: 500px;
   padding-top: 10px;
+  display: grid;
+  align-items: center;
+  justify-items: center;
 }
 
-.incard1 {
+.incard1, .incard2, .incard3, .incard4, .incard5,
+.incard6, .incard7, .incard8, .incard9, .incard10 {
   background-color: #f8cb02;
   width: 100%;
   padding-top: 0;
   font-size: 1.3rem;
   overflow: hidden;
   max-height: 0;
-  display: grid; /* Keep the grid display always on */
+  display: grid;  /* Ensure content stays centered */
   align-items: center;
-  justify-items: center; /* Keep content centered */
+  justify-items: center;
   transition: max-height 0.5s ease, padding-top 0.5s ease;
 }
 
-.card1 {
+.card1, .card2, .card3, .card4, .card5,
+.card6, .card7, .card8, .card9, .card10 {
   display: grid;
   align-items: center;
   justify-items: center;
   padding: 0;
-  margin-top: 1.2rem;
+  margin: 1rem 2rem 0rem 2rem;
   background-color: #a08403;
 }
 
 
-
-#ch2 {
-  display: none;
-}
-
-#ch2:checked ~ .incard2{
-  display: block;
-  display: grid;
-  align-items: center;
-  justify-items: center;
-}
-
-.incard2 {
+.gotop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
   background-color: #f8cb02;
-  width: 100%;
-  padding-top: 0;
-  display: none;
-  font-size: 1.3rem;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 0; /* Hidden by default */
+  /* transform: translateY(100px); */
 }
 
-.card2{
-  display: grid;
-  align-items: center;
-  justify-items: center;
-  padding: 0;
-  margin-top: 1.2rem;
+.gotop:hover {
   background-color: #a08403;
 }
 
-#ch3 {
-    display: none;
-  }
-  
-  #ch3:checked ~ .incard3{
-    display: block;
-    display: grid;
-    align-items: center;
-    justify-items: center;
-  }
-  
-  .incard3 {
-    background-color: #f8cb02;
-    width: 100%;
-    padding-top: 0;
-    display: none;
-    font-size: 1.3rem;
-  }
-  
-  .card3{
-    display: grid;
-    align-items: center;
-    justify-items: center;
-    padding: 0;
-    margin-top: 1.2rem;
-    background-color: #a08403;
-  }
+.gotop.show {
+  opacity: 1; /* Show button when the class 'show' is added */
+  transform: translateY(0); /* Move it into view */
+}
 
-  #ch4 {
-    display: none;
-  }
-  
-  #ch4:checked ~ .incard4{
-    display: block;
-    display: grid;
-    align-items: center;
-    justify-items: center;
-  }
-  
-  .incard4 {
-    background-color: #f8cb02;
-    width: 100%;
-    padding-top: 0;
-    display: none;
-    font-size: 1.3rem;
-  }
-  
-  .card4{
-    display: grid;
-    align-items: center;
-    justify-items: center;
-    padding: 0;
-    margin-top: 1.2rem;
-    background-color: #a08403;
-  }
-
-  #ch5 {
-    display: none;
-  }
-  
-  #ch5:checked ~ .incard5{
-    display: block;
-    display: grid;
-    align-items: center;
-    justify-items: center;
-  }
-  
-  .incard5 {
-    background-color: #f8cb02;
-    width: 100%;
-    padding-top: 0;
-    display: none;
-    font-size: 1.3rem;
-  }
-  
-  .card5{
-    display: grid;
-    align-items: center;
-    justify-items: center;
-    padding: 0;
-    margin-top: 1.2rem;
-    background-color: #a08403;
-  }
-  
-  #ch6 {
-    display: none;
-  }
-  
-  #ch6:checked ~ .incard6{
-    display: block;
-    display: grid;
-    align-items: center;
-    justify-items: center;
-  }
-  
-  .incard6 {
-    background-color: #f8cb02;
-    width: 100%;
-    padding-top: 0;
-    display: none;
-    font-size: 1.3rem;
-  }
-  
-  .card6{
-    display: grid;
-    align-items: center;
-    justify-items: center;
-    padding: 0;
-    margin-top: 1.2rem;
-    background-color: #a08403;
-  }
-
-  #ch7 {
-    display: none;
-  }
-  
-  #ch7:checked ~ .incard7{
-    display: block;
-    display: grid;
-    align-items: center;
-    justify-items: center;
-  }
-  
-  .incard7 {
-    background-color: #f8cb02;
-    width: 100%;
-    padding-top: 0;
-    display: none;
-    font-size: 1.3rem;
-  }
-  
-  .card7{
-    display: grid;
-    align-items: center;
-    justify-items: center;
-    padding: 0;
-    margin-top: 1.2rem;
-    background-color: #a08403;
-  }
-
-  #ch8 {
-    display: none;
-  }
-  
-  #ch8:checked ~ .incard8{
-    display: block;
-    display: grid;
-    align-items: center;
-    justify-items: center;
-  }
-  
-  .incard8 {
-    background-color: #f8cb02;
-    width: 100%;
-    padding-top: 0;
-    display: none;
-    font-size: 1.3rem;
-  }
-  
-  .card8{
-    display: grid;
-    align-items: center;
-    justify-items: center;
-    padding: 0;
-    margin-top: 1.2rem;
-    background-color: #a08403;
-  }
-
-  #ch9 {
-    display: none;
-  }
-  
-  #ch9:checked ~ .incard9{
-    display: block;
-    display: grid;
-    align-items: center;
-    justify-items: center;
-  }
-  
-  .incard9 {
-    background-color: #f8cb02;
-    width: 100%;
-    padding-top: 0;
-    display: none;
-    font-size: 1.3rem;
-  }
-  
-  .card9{
-    display: grid;
-    align-items: center;
-    justify-items: center;
-    padding: 0;
-    margin-top: 1.2rem;
-    background-color: #a08403;
-  }
-
-  #ch10 {
-    display: none;
-  }
-  
-  #ch10:checked ~ .incard10{
-    display: block;
-    display: grid;
-    align-items: center;
-    justify-items: center;
-  }
-  
-  .incard10 {
-    background-color: #f8cb02;
-    width: 100%;
-    padding-top: 0;
-    display: none;
-    font-size: 1.3rem;
-  }
-  
-  .card10{
-    display: grid;
-    align-items: center;
-    justify-items: center;
-    padding: 0;
-    margin-top: 1.2rem;
-    background-color: #a08403;
-  }
