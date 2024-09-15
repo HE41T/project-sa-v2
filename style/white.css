@@ -146,4 +146,142 @@ label {
     background-color: #a08403;
   }
   
+  #ch6 {
+    display: none;
+  }
+  
+  #ch6:checked ~ .incard6{
+    display: block;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+  }
+  
+  .incard6 {
+    background-color: #f8cb02;
+    width: 100%;
+    padding-top: 0;
+    display: none;
+    font-size: 1.3rem;
+  }
+  
+  .card6{
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    padding: 0;
+    margin-top: 1.2rem;
+    background-color: #a08403;
+  }
 
+  #ch7 {
+    display: none;
+  }
+  
+  #ch7:checked ~ .incard7{
+    display: block;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+  }
+  
+  .incard7 {
+    background-color: #f8cb02;
+    width: 100%;
+    padding-top: 0;
+    display: none;
+    font-size: 1.3rem;
+  }
+  
+  .card7{
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    padding: 0;
+    margin-top: 1.2rem;
+    background-color: #a08403;
+  }
+
+  #ch8 {
+    display: none;
+  }
+  
+  #ch8:checked ~ .incard8{
+    display: block;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+  }
+  
+  .incard8 {
+    background-color: #f8cb02;
+    width: 100%;
+    padding-top: 0;
+    display: none;
+    font-size: 1.3rem;
+  }
+  
+  .card8{
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    padding: 0;
+    margin-top: 1.2rem;
+    background-color: #a08403;
+  }
+
+  #ch9 {
+    display: none;
+  }
+  
+  #ch9:checked ~ .incard9{
+    display: block;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+  }
+  
+  .incard9 {
+    background-color: #f8cb02;
+    width: 100%;
+    padding-top: 0;
+    display: none;
+    font-size: 1.3rem;
+  }
+  
+  .card9{
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    padding: 0;
+    margin-top: 1.2rem;
+    background-color: #a08403;
+  }
+
+  #ch10 {
+    display: none;
+  }
+  
+  #ch10:checked ~ .incard10{
+    display: block;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+  }
+  
+  .incard10 {
+    background-color: #f8cb02;
+    width: 100%;
+    padding-top: 0;
+    display: none;
+    font-size: 1.3rem;
+  }
+  
+  .card10{
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    padding: 0;
+    margin-top: 1.2rem;
+    background-color: #a08403;
+  }
