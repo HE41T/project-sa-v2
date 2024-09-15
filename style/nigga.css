@@ -42,7 +42,7 @@ body{
   box-shadow: 10px 10px 15px rgb(87, 87, 87);
   position: sticky;
   top: 0;
-  transition: box-shadow 0.3s ease
+  transition: box-shadow 0.3s ease;
 }
 
 .header {
