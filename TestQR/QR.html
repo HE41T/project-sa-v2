@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Generate QRCode</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="QR1.css">
+</head>
+<body>
+    <div class="container">
+        <h1 style="padding-top: 3rem;">ระบบทำบุญผ่าน QR Code</h1>
+        <text>โปรดกรอกจำนวนเงินตามที่จิตศรัทธา</text>
+        <div class="coolinput">
+        <label class="text" for="input">จำนวนเงิน</label>
+        <input type="text" id="amount" step="0.01" class="input" min="0" placeholder="0.00" oninput="limitDecimalPlaces(this, 2)">
+        </div>
+        <button onclick="genQR()" class="button" >สร้าง QR Code</button>
+    <img id="imgqr" src="" class="QRimg">
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script>
+        function genQR() {
+            $.ajax({
+                method: 'post',
+                url: 'http://localhost:3000/generateQR',
+                data: {
+                    amount: parseFloat($("#amount").val())
+                },
+                success: function(response) {
+                    console.log('good', response)
+                    $("#imgqr").attr('src', response.Result)
+                }, error: function(err) {
+                    console.log('bad', err)
+                }
+            })
+        }
+    </script>
+</body>
+</html>
