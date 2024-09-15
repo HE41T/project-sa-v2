@@ -1,31 +1,36 @@
 label {
+  width: 100%;
   cursor: pointer;
   padding: 0;
   display: grid;
   align-items: center;
   justify-items: center;
+  transition: all 0.5s ease;
 }
 
 #ch1 {
   display: none;
 }
 
-#ch1:checked ~ .incard1{
-  display: block;
-  display: grid;
-  align-items: center;
-  justify-items: center;
+#ch1:checked ~ .incard1 {
+  max-height: 500px; /* Adjust this value to match the maximum expected height */
+  padding-top: 10px;
 }
 
 .incard1 {
   background-color: #f8cb02;
   width: 100%;
   padding-top: 0;
-  display: none;
   font-size: 1.3rem;
+  overflow: hidden;
+  max-height: 0;
+  display: grid; /* Keep the grid display always on */
+  align-items: center;
+  justify-items: center; /* Keep content centered */
+  transition: max-height 0.5s ease, padding-top 0.5s ease;
 }
 
-.card1{
+.card1 {
   display: grid;
   align-items: center;
   justify-items: center;
@@ -33,6 +38,8 @@ label {
   margin-top: 1.2rem;
   background-color: #a08403;
 }
+
+
 
 #ch2 {
   display: none;
