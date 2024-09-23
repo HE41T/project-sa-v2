@@ -1,15 +1,16 @@
 p{
   padding: 0rem 1.2rem 0rem 1.2rem;
+  color: #343131;
+
 }
 
 label {
   width: 100%;
   cursor: pointer;
-  padding: 0;
+  padding: 0 0 0 3.25rem;
   display: grid;
-  align-items: center;
-  justify-items: center;
   transition: all 0.5s ease;
+  color: #343131;
 }
 
 #ch1, #ch2, #ch3, #ch4, #ch5, #ch6, #ch7, #ch8, #ch9, #ch10 {
@@ -27,37 +28,42 @@ label {
 #ch8:checked ~ .incard8,
 #ch9:checked ~ .incard9,
 #ch10:checked ~ .incard10 {
-  max-height: 500px;
+  max-height: 1200px;
   padding-top: 10px;
   display: grid;
   align-items: center;
+  font-size: 1.55rem;
   justify-items: center;
 }
 
 .incard1, .incard2, .incard3, .incard4, .incard5,
 .incard6, .incard7, .incard8, .incard9, .incard10 {
-  background-color: #f8cb02;
+  background-color: #FFF3CD;
   width: 100%;
   padding-top: 0;
-  font-size: 1.3rem;
   overflow: hidden;
   max-height: 0;
   display: grid;  /* Ensure content stays centered */
   align-items: center;
+  text-align: center;
   justify-items: center;
   transition: max-height 0.5s ease, padding-top 0.5s ease;
+  border-bottom-right-radius: 0.8rem;
+  border-bottom-left-radius: 0.8rem;
 }
 
 .card1, .card2, .card3, .card4, .card5,
 .card6, .card7, .card8, .card9, .card10 {
+  text-align: left;
+  border-radius: 0.8rem;
   display: grid;
-  align-items: center;
-  justify-items: center;
+  /* align-items: center;
+  justify-items: center; */
   padding: 0;
-  margin: 1rem 2rem 0rem 2rem;
-  background-color: #a08403;
+  margin: 1.5rem 2rem 0rem 2rem;
+  background-color: #FFC38B;
+  font-size: 1.3rem;
 }
-
 
 .gotop {
   position: fixed;
@@ -65,7 +71,7 @@ label {
   right: 20px;
   width: 50px;
   height: 50px;
-  background-color: #f8cb02;
+  background-color: #FF8A5C;
   border: none;
   border-radius: 50%;
   display: flex;
@@ -74,14 +80,8 @@ label {
   font-size: 24px;
   color: #fff;
   cursor: pointer;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   transition: opacity 0.3s ease, transform 0.3s ease;
   opacity: 0; /* Hidden by default */
-  /* transform: translateY(100px); */
-}
-
-.gotop:hover {
-  background-color: #a08403;
 }
 
 .gotop.show {

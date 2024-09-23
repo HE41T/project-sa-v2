@@ -1,7 +1,7 @@
 
 body{
   font-family: "Kanit";
-  background-image: url('https://www.matichon.co.th/wp-content/uploads/2024/09/เลิกรักษา00.jpg');
+  background-color: #343131;
   margin: 0;
   padding: 0;
 }
@@ -23,77 +23,33 @@ body{
   }
 }
 
-.contant {
-  background-color: #ffffff;
-  margin: 1rem;
-  border-radius: 2rem;
-  border: 2px solid white;
-  display: grid;
-  align-items: center;
-  justify-items: center;
-}
-
-
 .warpper{
-  background-color: white;
-  display:flex;
-  flex-direction: column;
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* จัดกึ่งกลางแนวนอน */
+  align-items: center; /* จัดกึ่งกลางแนวตั้ง */
+  background-color: #FF8A5C;
+  width: 100%; /* ขนาดเต็มหน้าจอ */
+  margin: 0 auto; /* จัดให้อยู่ตรงกลางในแนวนอน */
+  padding: 10px; /* เพิ่มช่องว่างภายใน */
+  box-sizing: border-box; /* ป้องกันการขยายตัวเกินขนาดจาก padding */
+}
+
+nav {
+  display: flex;
+  justify-content: center; /* จัดให้อยู่กึ่งกลาง */
   align-items: center;
-  box-shadow: 10px 10px 15px rgb(72, 72, 72);
-  position: sticky;
-  top: 0;
-  transition: box-shadow 0.3s ease;
+  gap: 8rem; /* ระยะห่างเท่ากันระหว่างลิงก์ */
 }
 
-.header {
-  grid-area: header;
-  background-color: #4CAF50;
-  color: white;
-  text-align: center;
-  padding: 20px;
+nav a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 40px;
+  color: #ffffff;
+  transition: all 0.3s ease; /* เพิ่ม transition สำหรับเอฟเฟกต์ */
 }
 
-.banner {
-  grid-area: banner;
-  background-color: #2196F3;
-  color: white;
-  text-align: center;
-  padding: 20px;
+nav a:hover {
+  color: #343131; /* เปลี่ยนสีตัวอักษรเมื่อ hover */
 }
-
-.left-aside {
-  grid-area: left-aside;
-  background-color: #f1f1f1;
-  padding: 20px;
-  text-align: center;
-}
-
-.main {
-  grid-area: main;
-  background-color: #ffffff;
-  padding: 20px;
-  text-align: center;
-}
-
-.right-aside {
-  grid-area: right-aside;
-  background-color: #f1f1f1;
-  padding: 20px;
-  text-align: center;
-}
-
-.low-content {
-  grid-area: low-content;
-  background-color: #ddd;
-  padding: 20px;
-  text-align: center;
-}
-
-.footer {
-  grid-area: footer;
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 20px;
-}
-
