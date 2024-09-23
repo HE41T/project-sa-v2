@@ -13,10 +13,10 @@
 </head>
 <body>
     <div class="container">
-        <h1 style="padding-top: 3rem;">ระบบทำบุญผ่าน QR Code</h1>
-        <text>โปรดกรอกจำนวนเงินตามที่จิตศรัทธา</text>
+        <h1 style="padding-top: 3rem; color: #FF8A5C;">ระบบทำบุญผ่าน QR Code</h1>
+        <text style="color: #ffffff; font-size: 1.2rem;">โปรดกรอกจำนวนเงินตามที่จิตศรัทธา</text>
         <div class="coolinput">
-        <label class="text" for="input">จำนวนเงิน</label>
+        <label class="text" for="input">จำนวนเงิน (บาท)</label>
         <input type="text" id="amount" step="0.01" class="input" min="0" placeholder="0.00" oninput="limitDecimalPlaces(this, 2)">
         </div>
         <button onclick="genQR()" class="button" >สร้าง QR Code</button>
